@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>轻量级-文本编辑器</title>
+		<link rel="stylesheet" type="text/css" href="text.css">
+		<script type="text/javascript" src="text.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<!-- 控制区域的内容以及布局 -->
+			<div id="control-area">
+				<!-- 操作步骤 -->
+				<div class="btn-group">
+					<a href="#" class="btn blue" data-command="undo" onclick="changeStyle(this.dataset)">撤销</a>
+					<a href="#" class="btn blue" data-command="redo" onclick="changeStyle(this.dataset)">重做</a>
+				</div>
+				<!-- 字体表现 -->
+				<div class="btn-group">
+					<a href="#" class="btn grey" data-command="italic" onclick="changeStyle(this.dataset)">斜体</a>
+					<a href="#" class="btn grey" data-command="bold" onclick="changeStyle(this.dataset)">粗体</a>
+					<a href="#" class="btn grey" data-command="underline" onclick="changeStyle(this.dataset)">下划线</a>
+					<a href="#" class="btn grey" data-command="strikeThrough" onclick="changeStyle(this.dataset)">删除线</a>
+				</div>
+				<!-- 字体对齐方式 -->
+				<div class="btn-group">
+					<a href="#" class="btn blue" data-command="justifyLeft" onclick="changeStyle(this.dataset)">居左</a>
+					<a href="#" class="btn blue" data-command="justifyCenter" onclick="changeStyle(this.dataset)">居中</a>
+					<a href="#" class="btn blue" data-command="justifyRight" onclick="changeStyle(this.dataset)">居右</a>
+					<a href="#" class="btn blue" data-command="justifyFull" onclick=" changeStyle(this.dataset)">两端</a>
+				</div>
+				<!-- 缩进方式 -->
+				<div class="btn-group">
+					<a href="#" class="btn grey" data-command="indent" onclick	  ="changeStyle(this.dataset)">右缩进</a>
+					<a href="#" class="btn grey" data-command="outdent" 		onclick="changeStyle(this.dataset)">左缩进</a>
+				</div>
+				<!-- 列表的样式 -->
+				<div class="btn-group">
+					<a href="#" class='btn blue' data-command='insertOrderedList' onclick="changeStyle(this.dataset)">有序列表</a>
+            		<a href="#" class='btn blue' data-command='insertUnorderedList' onclick="changeStyle(this.dataset)">无序列表</a>
+				</div>
+				<!-- sub&& sup -->
+				<div class="btn-group">
+					<a href="#" class="btn grey" data-command="superscript" onclick="changeStyle(this.dataset)">上标</a>
+					<a href="#" class="btn grey" data-command="subscript" onclick="changeStyle(this.dataset)">下标</a>
+				</div>
+				<!-- 文本操作 -->
+				<div class="btn-group">
+					<a href="#" class="btn blue" data-command="selectAll" 		onclick="changeStyle(this.dataset)">全选</a>
+					<a href="#" class="btn blue" data-command="copy" onclick="changeStyle(this.dataset)">复制</a>
+					<a href="#" class="btn blue" data-command="cut" onclick="changeStyle(this.dataset)">剪切</a>
+					<a href="#" class="btn blue" data-command="delete" onclick="changeStyle(this.dataset)">删除</a>
+				</div>
+				<!-- 字体的大小 -->
+				<div class="btn-group">
+					<a href="#" class="btn grey" data-command="fontSize" 		data-value="6" onclick="changeStyle(this.dataset)">h1</a>
+					<a href="#" class="btn grey" data-command="fontSize" 	data-value="5" onclick="changeStyle(this.dataset)">h2</a>
+					<a href="#" class="btn grey" data-command="fontSize" 	data-value="4" onclick="changeStyle(this.dataset)">h3</a>
+					<a href="#" class="btn grey" data-command="fontSize" 	data-value="3" onclick="changeStyle(this.dataset)">h4</a>
+					<a href="#" class="btn grey" data-command="fontSize" 	data-value="2" onclick="changeStyle(this.dataset)">h5</a>
+					<a href="#" class="btn grey" data-command="fontSize" 		data-value="1" onclick="changeStyle(this.dataset)">h6</a>
+				</div>
+				<!-- 字体样式 -->
+				<div class="btn-group">
+					<a href="#" class="btn blue" data-command="fontName" 		data-value="SimSun" onclick="changeStyle(this.dataset)">宋体</a>
+					<a href="#" class="btn blue" data-command="fontName" 	data-value="SimHei" onclick="changeStyle(this.dataset)">黑体</a>
+					<a href="#" class="btn blue" data-command="fontName" 	data-value="KaiTi" onclick="changeStyle(this.dataset)">楷体</a>
+					<a href="#" class="btn blue" data-command="fontName" 	data-value="FangSong" onclick="changeStyle(this.dataset)">仿宋</a>
+					<a href="#" class="btn blue" data-command="fontName" 		data-value="Microsoft YaHei" onclick="changeStyle(this.dataset)">雅黑</a>
+				</div>
+				<!-- 选中的字体颜色 -->
+				<div class="btn-group" id="btn-color">
+					<a href="#" class="btn" data-command="foreColor" 		data-value="red" onclick="changeStyle(this.dataset)" 	 style="background-color: red;">&nbsp;&nbsp;</a>
+					<a href="#" class="btn" data-command="foreColor" 	data-value="orange" onclick="changeStyle(this.dataset)"   style="background-color: orange;">&nbsp;&nbsp;</a>
+					<a href="#" class="btn" data-command="foreColor" 	data-value="yellow" onclick="changeStyle(this.dataset)"   style="background-color: yellow;">&nbsp;&nbsp;</a>
+					<a href="#" class="btn" data-command="foreColor" 		data-value="green" onclick="changeStyle(this.dataset)" 	  style="background-color: green;">&nbsp;&nbsp;</a>
+					<a href="#" class="btn" data-command="foreColor" 	data-value="blue" onclick="changeStyle(this.dataset)" 	  style="background-color: blue;">&nbsp;&nbsp;</a>
+					<a href="#" class="btn" data-command="foreColor" 	data-value="cyan" onclick="changeStyle(this.dataset)" 	  style="background-color: cyan;">&nbsp;&nbsp;</a>
+					<a href="#" class="btn" data-command="foreColor"    	 data-value="purple" onclick="changeStyle(this.dataset)"   style="background-color: purple;">&nbsp;&nbsp;</a>
+				</div>
+			</div>
+
+			<!-- 可编辑的文本区域 -->
+			<div id="text-area" contenteditable>
+				<h1>欢迎使用这个 Editor</h1>
+				<h2>该项目主要是使用document.execCommand实现的,参照MDN-Web Api接口文档,将易于实现的挨个进行实现</h2>
+			</div>
+			<div id="submit-btn">
+				<a href="#" class="btn-blue" onclick="console.log(document.getElementById('text-area').innerHTML)">打印输出文本区域的内容(全部内容直接打印在控制台中)</a>
+			</div>
+		</div>
+	</body>
+</html>

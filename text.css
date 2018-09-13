@@ -1,0 +1,74 @@
+/*对整个盒子的边框修饰*/
+#box{
+	border: 1px solid #ddd;
+}
+
+/*控制区的盒子*/
+#control-area{
+	margin-bottom: 10px;
+}
+
+/*文本区域的盒子*/
+#text-area{
+	background-color: #272822;
+	padding: 10px;
+	min-height: 100px;
+	max-height: 500px;
+	color: #e5e5e5;
+	border-radius: 5px;
+	overflow: auto;
+}
+
+/*打印按钮*/
+#submit-btn{
+	margin-top: 10px;
+	width: 400px;
+	float: right;
+	margin-right: 30px;
+	background-color: lightblue;
+	padding: 5px;
+}
+
+/*每个group设置为内联样式*/
+.btn-group{
+	display: inline-block;
+	margin-left: 17px;
+}
+
+.btn-group a{
+	margin-left: -8px;
+	margin-top: 5px;
+	display: inline-block;
+}
+
+#btn-color a{
+	margin-left: -5px;
+}
+
+/*.btn-group .right{
+	margin-right: 10px;
+}*/
+
+/*对控制台的命令进行修饰*/
+.btn{
+	font-size: 12px;
+	text-decoration: none;
+	padding: 3px 5px;
+	border-radius: 3px;
+	box-shadow: 0px 0px 2px #fff inset;
+}
+
+/*控制台的背景色调试*/
+.blue{
+	color: #41788c;
+	border: 1px solid #6fb1c7;
+	background-color: #73d0f1;
+	text-shadow: 1px 1px 1px #bfeafb;
+}
+
+.grey{
+	color: #444;
+	border: 1px solid #d0d0d0;
+	background-color: #e1e1e1;
+	text-shadow: 1px 1px 1px #fff;
+}
